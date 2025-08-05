@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Anônimo do Gabriel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="chatContainer">
+    <h2>Chat Anônimo do Gabriel</h2>
+
+    <div id="login">
+      <p>Digite seu apelido:</p>
+      <input id="nickname" placeholder="Seu apelido" />
+      <button onclick="entrar()">Entrar</button>
+    </div>
+
+    <div id="chatArea" style="display: none;">
+      <div id="messages"></div>
+      <div id="form">
+        <input id="msg" placeholder="Mensagem..." />
+        <button id="sendBtn" onclick="enviar()">Enviar</button>
+      </div>
+    </div>
+
+    <div id="admin" style="display: none;">
+      <h3>Admin: Gabriel</h3>
+      <div id="chats"></div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
